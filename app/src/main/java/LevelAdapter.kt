@@ -1,9 +1,11 @@
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ahorcado.R
+import com.google.android.material.card.MaterialCardView
 
 //Esta fue una idea la cual me ayudo a completar Chat GPT
 
@@ -16,10 +18,27 @@ class LevelAdapter(
     //Inner marca que es una clase interna
     inner class LevelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val _wordText = itemView.findViewById<TextView>(R.id.txtWord)
+        private val _lettersCountText = itemView.findViewById<TextView>(R.id.txtLetterCount)
+        private val _image = itemView.findViewById<ImageView>(R.id.imgLevel)
+        private val _card = itemView.findViewById<MaterialCardView>(R.id.cardLevel)
 
-        // Función que recibe un Level y lo muestra en pantalla
+        // Función que recibe un Level y lo muestra en pantalla creando su tarjeta
         fun SetAndShowLevel(level: Level) {
+
+            val count = level.word.length
+
             _wordText.text = level.word
+            _lettersCountText.text = count.toString()
+            _image.setImageResource(level.imageResId)
+
+            // Colorear según dificultad
+            val color = when (count) {
+                in 1..4 -> android.graphics.Color.parseColor("#4CAF50")   // Verde
+                in 5..7 -> android.graphics.Color.parseColor("#FFC107")   // Amarillo
+                else -> android.graphics.Color.parseColor("#F44336")      // Rojo
+            }
+            _card.setCardBackgroundColor(color)
+
             itemView.setOnClickListener {
                 _onClick(level)
             }

@@ -22,22 +22,13 @@ class LevelSelector : AppCompatActivity() {
         val recycler = findViewById<RecyclerView>(R.id.recyclerLevels)
 
         val levelList = listOf(
-            Level("GATO"),
-            Level("PERRO"),
-            Level("CASA"),
-            Level("JUEGO"),
-            Level("CELULAR"),
-            Level("PLAYA"),
-            Level("PLATA"),
-            Level("PLAYA2"),
-            Level("PLAYA3"),
-            Level("PLAYA4"),
-            Level("PLAYA5"),
-            Level("PLAYA6"),
-            Level("PLAYA7"),
-            Level("PLAYA8"),
-            Level("PLAYA9"),
-            Level("PLAYA10"),
+            Level("GATO", R.drawable.l_gato),
+            Level("PERRO", R.drawable.l_perro),
+            Level("CASA", R.drawable.l_casa),
+            Level("JUEGO", R.drawable.l_juego),
+            Level("CELULAR", R.drawable.l_celular),
+            Level("PLAYA", R.drawable.l_playa),
+            Level("VIDEOJUEGOS", R.drawable.l_videojuegos)
         )
 
         recycler.layoutManager = LinearLayoutManager(this) //Los acomoda verticalmente
