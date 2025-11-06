@@ -3,6 +3,7 @@ package com.example.ui
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import com.example.ahorcado.R
 
@@ -27,12 +28,12 @@ class TopBar( //pido un AppCompatActivity y un toolbar de donde sacare las refer
     {
         return when (item.itemId) {
             R.id.LightMode -> {
-                //Para poner su logica
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 true
             }
 
             R.id.DarkMode -> {
-                // Para poner su logica
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 true
             }
             else -> false
