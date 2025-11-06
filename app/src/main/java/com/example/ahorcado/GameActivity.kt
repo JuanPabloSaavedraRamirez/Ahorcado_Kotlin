@@ -3,11 +3,15 @@ package com.example.ahorcado
 import GoLevelSelector
 import android.content.Context
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.ahorcado.logic.GameLogic
+import com.example.ui.TopBar
 
 class GameActivity : AppCompatActivity()
 {
@@ -19,8 +23,9 @@ class GameActivity : AppCompatActivity()
     private lateinit var _resultTxt: TextView
 
     private lateinit var _rootLayout: ViewGroup
-
     private lateinit var _gameLogic: GameLogic
+
+    private lateinit var _topbar: TopBar
 
     private val _hangmanImages = arrayOf(
         R.drawable.a_0,
@@ -43,6 +48,12 @@ class GameActivity : AppCompatActivity()
         _tryButton = findViewById(R.id.btnTry)
         _resultTxt = findViewById(R.id.txtResult)
 
+        //Creo mi topbar aqui
+        val toolbar = findViewById<Toolbar>(R.id.topBarViewGameplay)
+        _topbar = TopBar(this, toolbar)
+        _topbar.init()
+
+        //Sigo con el gameplay
         val word = intent.getStringExtra("WORD") ?: ""
         _gameLogic = GameLogic(word.uppercase()) //Obtiene la logica y a su vez pasa la palabra en mayusculas
 
@@ -64,6 +75,8 @@ class GameActivity : AppCompatActivity()
             CheckEnd()
         }
     }
+
+    //Funciones de gameplay
 
     //En esta funcion me ayudo GPT para poder sacar el teclado y poner el foco en el input
     private fun ShowKeyboard()
@@ -112,5 +125,17 @@ class GameActivity : AppCompatActivity()
         _rootLayout = findViewById(R.id.mainLayoutGame)
         val goLevelSelector = GoLevelSelector(this)
         _rootLayout.setOnClickListener{goLevelSelector.GoToLevelSelector()}
+    }
+
+
+    //Funciones de topbar
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean
+    {
+        return _topbar.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean
+    {
+        return _topbar  .onOptionsItemSelected(item) || super.onOptionsItemSelected(item)
     }
 }
