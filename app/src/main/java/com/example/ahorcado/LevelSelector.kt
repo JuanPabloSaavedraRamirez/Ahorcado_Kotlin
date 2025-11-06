@@ -13,9 +13,10 @@ import androidx.recyclerview.widget.RecyclerView //(agregar esta libreria fue id
 // Muestra una lista scrollable con objetos repetidos (ítems).
 // Como tal se reciclan los componentes, entonces usa ya las nuevas para mostrar los nuevos datos
 
-class LevelSelector : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+class LevelSelector : AppCompatActivity()
+{
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_level_selector)
 
@@ -33,7 +34,9 @@ class LevelSelector : AppCompatActivity() {
 
         recycler.layoutManager = LinearLayoutManager(this) //Los acomoda verticalmente
 
-        recycler.adapter = LevelAdapter(levelList) { level -> //hago que mi clase Level adapter sea el puente
+        recycler.adapter = LevelAdapter(levelList)
+        {
+            level -> //hago que mi clase Level adapter sea el puente
             val intent = Intent(this, GameActivity::class.java)
             intent.putExtra("WORD", level.word)
             startActivity(intent)

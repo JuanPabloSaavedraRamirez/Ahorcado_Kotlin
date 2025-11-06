@@ -13,18 +13,19 @@ import com.google.android.material.card.MaterialCardView
 class LevelAdapter(
     private val _levels: List<Level>,
     private val _onClick: (Level) -> Unit  // Función que se ejecuta al hacer clic en un ítem
-) : RecyclerView.Adapter<LevelAdapter.LevelViewHolder>() { //Hereda de  RecyclerView.Adapter
-
+) : RecyclerView.Adapter<LevelAdapter.LevelViewHolder>() //Hereda de  RecyclerView.Adapter
+{
     //Inner marca que es una clase interna
-    inner class LevelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class LevelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    {
         private val _wordText = itemView.findViewById<TextView>(R.id.txtWord)
         private val _lettersCountText = itemView.findViewById<TextView>(R.id.txtLetterCount)
         private val _image = itemView.findViewById<ImageView>(R.id.imgLevel)
         private val _card = itemView.findViewById<MaterialCardView>(R.id.cardLevel)
 
         // Función que recibe un Level y lo muestra en pantalla creando su tarjeta
-        fun SetAndShowLevel(level: Level) {
-
+        fun SetAndShowLevel(level: Level)
+        {
             val count = level.word.length
 
             _wordText.text = level.word
@@ -32,7 +33,8 @@ class LevelAdapter(
             _image.setImageResource(level.imageResId)
 
             // Colorear según dificultad
-            val color = when (count) {
+            val color = when (count)
+            {
                 in 1..4 -> android.graphics.Color.parseColor("#4CAF50")   // Verde
                 in 5..7 -> android.graphics.Color.parseColor("#FFC107")   // Amarillo
                 else -> android.graphics.Color.parseColor("#F44336")      // Rojo
@@ -49,7 +51,8 @@ class LevelAdapter(
     //Las funciones son parte de RecyclerView.Adapter
 
     //Parent es el RecyclerView que contiene los itens que se le pasan (en la jerarquia visual)
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelViewHolder
+    {
         val view = LayoutInflater.from(parent.context) // LayoutInflater sirve para convertir el XML em ima vista real (es como una instancia en unity)
             .inflate(R.layout.item_level_card, parent, false)
         // es falso porque RecyclerView se encarga de agregar la vista al contenedor en el momento correcto y ponerlo como true se agregaria de inmediato y puede causar problemas
@@ -59,7 +62,8 @@ class LevelAdapter(
     override fun getItemCount() = _levels.size
 
     //Se encarga de asociar los datos del nivel con su viewholder a su posicion
-    override fun onBindViewHolder(holder: LevelViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: LevelViewHolder, position: Int)
+    {
         holder.SetAndShowLevel(_levels[position])
     }
 }
