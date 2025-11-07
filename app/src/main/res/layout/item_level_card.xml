@@ -40,7 +40,7 @@
                 android:id="@+id/txtLettersTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Letras:"
+                android:text="@string/letters"
                 android:textColor="#444444"
                 android:textSize="16sp" />
 

@@ -19,6 +19,14 @@
         android:theme="?attr/actionBarTheme"
         app:menu="@menu/custom_toolbar" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_level"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerLevels"
         android:layout_width="match_parent"

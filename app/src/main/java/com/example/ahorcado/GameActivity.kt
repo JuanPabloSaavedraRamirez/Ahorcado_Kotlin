@@ -100,12 +100,16 @@ class GameActivity : AppCompatActivity()
     {
         if (_gameLogic.IsGameWon())
         {
-            _resultTxt.text = "Ganaste\nTap para volver"
+            val msj = getString(R.string.win)
+            val continueMsj = getString(R.string.tap_continue)
+            _resultTxt.text = "$msj\n$continueMsj"
             EndGame()
         }
         if (_gameLogic.IsGameLost())
         {
-            _resultTxt.text = "Perdiste, la palabra era: ${_gameLogic.GetSolution()} \nTap para volver"
+            val msj = getString(R.string.lose)
+            val continueMsj = getString(R.string.tap_continue)
+            _resultTxt.text = "$msj ${_gameLogic.GetSolution()} \n$continueMsj"
             EndGame()
         }
     }

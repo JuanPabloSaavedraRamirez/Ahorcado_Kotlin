@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ahorcado</string>
+    <string name="tap_continue">Click para continuar</string>
+    <string name="select_level">Selecciona un nivel</string>
+    <string name="write_letter">Escribe una letra</string>
+    <string name="intent">Intentar</string>
+    <string name="letters">Letras:</string>
+    <string name="win">Ganaste!</string>
+    <string name="lose">Perdiste, la palabra era:</string>
+    <string name="cat">Gato</string>
+    <string name="dog">Perro</string>
+    <string name="house">Casa</string>
+    <string name="game">Juego</string>
+    <string name="cellular">Celular</string>
+    <string name="beach">Playa</string>
+    <string name="videogame">Videojuego</string>
+    <string name="pc">Computadora</string>
+    <string name="cape">Capa</string>
+    <string name="sword">Espada</string>
+    <string name="ice_cream">Helado</string>
+</resources>
