@@ -38,7 +38,7 @@ class LevelSelector : AppCompatActivity()
             Level(getString(R.string.cat), R.drawable.l_gato),
             Level(getString(R.string.dog), R.drawable.l_perro),
             Level(getString(R.string.house), R.drawable.l_casa),
-            Level(getString(R.string.house), R.drawable.l_juego),
+            Level(getString(R.string.game), R.drawable.l_juego),
             Level(getString(R.string.cellular), R.drawable.l_celular),
             Level(getString(R.string.beach), R.drawable.l_playa),
             Level(getString(R.string.videogame), R.drawable.l_videojuegos),
