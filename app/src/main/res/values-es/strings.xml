@@ -8,4 +8,15 @@
     <string name="letters">Letras:</string>
     <string name="win">Ganaste!</string>
     <string name="lose">Perdiste, la palabra era:</string>
+    <string name="cat">Gato</string>
+    <string name="dog">Perro</string>
+    <string name="house">Casa</string>
+    <string name="game">Juego</string>
+    <string name="cellular">Celular</string>
+    <string name="beach">Playa</string>
+    <string name="videogame">Videojuego</string>
+    <string name="pc">Computadora</string>
+    <string name="cape">Capa</string>
+    <string name="sword">Espada</string>
+    <string name="ice_cream">Helado</string>
 </resources>

@@ -7,4 +7,16 @@
     <string name="letters">Letters:</string>
     <string name="win">You Won!</string>
     <string name="lose">You Lose, the word is:</string>
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="house">House</string>
+    <string name="game">Game</string>
+    <string name="cellular">Cellular</string>
+    <string name="beach">Beach</string>
+    <string name="videogame">Videogame</string>
+    <string name="pc">Computer</string>
+    <string name="radio" translatable="false">Radio</string>
+    <string name="cape">Cape</string>
+    <string name="sword">Sword</string>
+    <string name="ice_cream">IceCream</string>
 </resources>
