@@ -3,6 +3,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ahorcado.R
 import com.google.android.material.card.MaterialCardView
@@ -35,9 +36,9 @@ class LevelAdapter(
             // Colorear según dificultad
             val color = when (count)
             {
-                in 1..4 -> android.graphics.Color.parseColor("#4CAF50")   // Verde
-                in 5..7 -> android.graphics.Color.parseColor("#FFC107")   // Amarillo
-                else -> android.graphics.Color.parseColor("#F44336")      // Rojo
+                in 1..4 -> ContextCompat.getColor(itemView.context, R.color.greenColor)
+                in 5..7 -> ContextCompat.getColor(itemView.context, R.color.yellowColor)
+                else -> ContextCompat.getColor(itemView.context, R.color.redColor)
             }
             _card.setCardBackgroundColor(color)
 

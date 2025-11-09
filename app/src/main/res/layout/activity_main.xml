@@ -7,16 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#2196F3"
     tools:context=".MainActivity">
 
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textColor="@android:color/white"
         android:textSize="48sp"
-        android:fontFamily="casual"
+        android:fontFamily="@font/vaseline_extra"
         android:layout_marginBottom="20dp"
         android:textStyle="bold"
         android:gravity="center" />
@@ -35,9 +33,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tap_continue"
-        android:textColor="@android:color/white"
         android:textSize="24sp"
         android:letterSpacing="0.1"
-        android:fontFamily="casual"
+        android:fontFamily="@font/vaseline_extra"
         android:gravity="center" />
     </LinearLayout>
