@@ -54,13 +54,22 @@
             <EditText
                 android:id="@+id/inputLetter"
                 android:layout_width="126dp"
-                android:layout_height="64dp"
+                android:layout_height="58dp"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/vaseline_extra"
                 android:gravity="center"
                 android:hint="@string/write_letter"
                 android:maxLength="1"
                 android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="270dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnTry"
@@ -79,6 +88,8 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 
