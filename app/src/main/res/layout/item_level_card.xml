@@ -36,6 +36,7 @@
             android:text="WORD"
             android:textColor="@android:color/black"
             android:textSize="22sp"
+            android:fontFamily="@font/vaseline_extra"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -50,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/letters"
-                android:textColor="#666666"
+                android:fontFamily="@font/vaseline_extra"
                 android:textSize="15sp" />
 
             <TextView
@@ -59,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="4"
-                android:textColor="#222222"
+                android:fontFamily="@font/vaseline_extra"
                 android:textSize="18sp" />
         </LinearLayout>
 

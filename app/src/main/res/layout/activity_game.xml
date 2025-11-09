@@ -40,24 +40,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="_ _ _ _"
+            android:fontFamily="@font/vaseline_extra"
             android:textSize="32sp"
             android:layout_marginTop="35dp" />
 
         <EditText
             android:id="@+id/inputLetter"
-            android:layout_width="100dp"
+            android:layout_width="126dp"
             android:layout_height="53dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/vaseline_extra"
             android:gravity="center"
             android:hint="@string/write_letter"
             android:maxLength="1"
-            android:textSize="15sp"
-            android:layout_marginTop="35dp" />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btnTry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/intent"
+            android:fontFamily="@font/vaseline_extra"
             android:layout_marginTop="35dp" />
 
         <TextView
@@ -66,6 +69,7 @@
             android:layout_height="wrap_content"
             android:textSize="28sp"
             android:textStyle="bold"
+            android:fontFamily="@font/vaseline_extra"
             android:layout_marginTop="40dp" />
 
     </LinearLayout>

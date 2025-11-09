@@ -5,9 +5,11 @@
     <item
         android:id="@+id/LightMode"
         android:icon="@drawable/ic_baseline_light_mode_24"
-        android:title="LightMode" />
+        android:title="LightMode"
+        android:fontFamily="@font/vaseline_extra"/>
     <item
         android:id="@+id/DarkMode"
         android:icon="@drawable/ic_baseline_dark_mode_24"
-        android:title="DarkMode" />
+        android:title="DarkMode"
+        android:fontFamily="@font/vaseline_extra"/>
 </menu>
