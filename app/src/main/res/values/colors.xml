@@ -2,4 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--light mode -->
+    <color name="l_primary">#71CFE4</color>
+    <color name="l_primaryVariant">#71E4D3</color>
+    <color name="l_secondary">#71A9E4</color>
+
+    <color name="l_background">#eae6ca</color>
+
+    <!--dark mode -->
+    <color name="d_primary">#116679</color>
+    <color name="d_primaryVariant">#115479</color>
+    <color name="d_secondary">#114379</color>
+
+    <color name="d_background">#646464</color>
+
+    <!--rank colors -->
+    <color name="greenColor">#4CAF50</color>
+    <color name="yellowColor">#FFC107</color>
+    <color name="redColor">#F44336</color>
 </resources>
